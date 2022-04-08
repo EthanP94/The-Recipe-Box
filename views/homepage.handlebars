@@ -1,0 +1,36 @@
+{{#if recipes}}
+  <h2>Saved Recipes!</h2>
+  {{#each recipes as |recipe|}}
+  <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="..." class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"> Recipe: {{name}}/h5>
+        <p class="card-text">{{description}}.</p>
+        <p class="card-text"><small class="text-muted">Serves: {{size}}</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+  {{/each}}
+{{else}}
+  <h2>You Have No Recipes Saved, Why Not Add Some?</h2>
+{{/if}}
+
+<h3>Create A New Recipe!</h3>
+
+<form class="form recipe-form">
+  <div class="form-group">
+    <label for="recipe-name">Name:</label>
+    <input class="form-input" type="text" id="recipe-name" />
+     <label for="recipe-description">Description:</label>
+    <input class="form-input" type="text" id="recipe-description" />
+    <label for="recipe-size">Serves:</label>
+    <input class="form-input" type="text" id="recipe-size" />
+  </div>
+    <button class="btn btn-primary" type="submit">CREATE IT</button>
+  </div>
+</form>
