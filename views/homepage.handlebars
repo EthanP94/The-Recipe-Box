@@ -1,20 +1,24 @@
 {{#if recipes}}
   <h2>Saved Recipes!</h2>
   {{#each recipes as |recipe|}}
-  <div class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="..." class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title"> Recipe: {{name}}/h5>
-        <p class="card-text">{{description}}.</p>
-        <p class="card-text"><small class="text-muted">Serves: {{size}}</small></p>
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img
+            src="{{image}}"
+            class="img-fluid rounded-start"
+            alt="Photo Of Food"
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"> Recipe: {{name}}</h5>
+            <p class="card-text">{{description}}</p>
+            <p class="card-text">Serves: {{size}}</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
   {{/each}}
 {{else}}
   <h2>You Have No Recipes Saved, Why Not Add Some?</h2>
@@ -22,15 +26,24 @@
 
 <h3>Create A New Recipe!</h3>
 
-<form class="form recipe-form">
-  <div class="form-group">
-    <label for="recipe-name">Name:</label>
-    <input class="form-input" type="text" id="recipe-name" />
-     <label for="recipe-description">Description:</label>
-    <input class="form-input" type="text" id="recipe-description" />
-    <label for="recipe-size">Serves:</label>
-    <input class="form-input" type="text" id="recipe-size" />
+<form>
+  <div class="mb-3">
+    <label for="recipe-name" class="form-label">Name of Recipe:</label>
+    <input type="text" class="form-control" id="recipe-name" />
   </div>
-    <button class="btn btn-primary" type="submit">CREATE IT</button>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" />
   </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button id="upload_widget" class="cloudinary-button">Upload A Picture</button>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+<script
+  src="https://upload-widget.cloudinary.com/global/all.js"
+  type="text/javascript"
+></script>
