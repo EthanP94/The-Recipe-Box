@@ -36,7 +36,7 @@ Recipe.init(
         allowNull: false,
     },
     directions: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
     },
     imageURL: {
         type: DataTypes.STRING,
@@ -48,7 +48,7 @@ Recipe.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Recipe',
+    modelName: 'recipe',
   }
 );
 
