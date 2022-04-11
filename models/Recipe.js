@@ -15,20 +15,20 @@ Recipe.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    serving_size: {
+    serves: {
         type: DataTypes.INTEGER,
         allowNull: false,
     },
     prep_time : {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: false,
     },
     cook_time : {
-        type: DataTypes.INTEGER,
-        allowNull: false,
+        type: DataTypes.STRING,
+        allowNull: true,
     },
     rest_time : {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
         allowNull: true,
     },
     ingredients: {
@@ -41,8 +41,6 @@ Recipe.init(
     imageURL: {
         type: DataTypes.STRING,
     }
-
-   
 
   },
   {
