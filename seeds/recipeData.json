@@ -34,5 +34,15 @@
     "ingredients": "2 Cups Sugar, 1/2 Cup Milk, 1 Stick Unsalted Butter, 1/4 Cup Unsweetened Cocoa Powder, 3 Cups Oldfashioned Rolled Oats, 1 Cup Smooth Peanut Butter, 1 Tbsp Vanilla Extract, Large Pinch of Kosher Salt",
     "directions": "Bring the sugar, milk, butter and cocoa to a boil in a medium saucepan over medium heat, stirring occasionally, then let boil for 1 minute. Remove from the heat. Add the oats, peanut butter, vanilla and salt, and stir to combine. Drop teaspoonfuls of the mixture onto wax paper lined baking sheet, and let sit at room temperature until cooled and hardened, about 30 minutes. Refrigerate in an airtight container for up to 3 days.",
     "imageURL": "https://res.cloudinary.com/dbwdsy3t8/image/upload/v1649689845/no-bake-cookies_xc3lay.jpg"
+  },
+  {
+      "name": "Tomato Soup",
+      "serves": "8",
+      "prep_time": "15 Min",
+      "cook_time": "40 Min",
+      "ingredients": "1 large yellow onion chopped, 1 stick of butter, 2 14.5oz cans of diced tomatoes, 1 46oz jar of tomato juice, 3 boulion cubes, 1 cup heavy cream, 1/4 cup basil, 1/4 cup parsley, salt and pepper to taste.",
+      "directions": "Melt butter in large pot, add onion and cook untill translucent, add canned tomatoes and cook for 10 minutes, add tomato juice, boulion cubes, heavy cream and herbs, heat through and serve.",
+      "imageURL": "https://res.cloudinary.com/dbwdsy3t8/image/upload/v1649697640/creamy-tomato-soup_wkgedk.jpg"
   }
+
 ]
