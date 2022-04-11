@@ -1,5 +1,11 @@
 #headerBackground {
     height: 100%;
+    background-color: #ff6666;
+    background-size: cover;
+}
+
+#homepageBackground {
+    height: 100%;
     background-image: url("../images/teapotbackground.jpg");
     background-size: cover;
   }

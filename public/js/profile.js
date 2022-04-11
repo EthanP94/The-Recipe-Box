@@ -1,25 +1,37 @@
+let photos = "";
+const myWidget = cloudinary.createUploadWidget(
+  {
+    cloudName: "dbwdsy3t8",
+    uploadPreset: "d3csb6jk",
+  },
+  (error, result) => {
+    if (!error && result && result.event === "success") {
+      photos = result.info.secure_url;
+      console.log("Done! Here is the image info: ", result.info);
+    }
+  }
+);
+
 const newFormHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector("#recipe-name").value.trim();
-  const prep_Time = document.querySelector("#prep_Time").value.trim();
-  const description = document.querySelector("#food_desc").value.trim();
-  const cool_Time = document.querySelector("#cool_time").value.trim();
-  let photos = ""
-  const myWidget = cloudinary.createUploadWidget({
-    cloudName: process.env.CLOUDINARY_CLOUD_ID, 
-    uploadPreset: 'my_preset'}, (error, result) => { 
-      if (!error && result && result.event === "success") {
-        photos = 
-        console.log('Done! Here is the image info: ', result.info); 
-      }
-    }
-  )
+  const cook_Time = document.querySelector("#recipe-cook_time").value.trim();
+  const description = document.querySelector("#recipe-directions").value.trim();
+  const cool_Time = document.querySelector("#recipe-rest_time").value.trim();
+  const prep_Time = document.querySelector("#recipe-prep_time").value.trim();
 
-  if (name && prep_Time && description && cool_Time) {
+  if (name && cook_Time && description && cool_Time) {
     const response = await fetch(`/api/recipes`, {
       method: "POST",
-      body: JSON.stringify({ name, prep_Time, description, cool_Time, }),
+      body: JSON.stringify({
+        name,
+        prep_Time,
+        cook_Time,
+        cool_Time,
+        description,
+        photos,
+      }),
       headers: {
         "Content-Type": "application/json",
       },
@@ -49,14 +61,18 @@ const delButtonHandler = async (event) => {
   }
 };
 
-document.getElementById("upload_widget").addEventListener("click", function(){
-  myWidget.open();
-}, false);
+document.getElementById("upload_widget").addEventListener(
+  "click",
+  function () {
+    myWidget.open();
+  },
+  false
+);
 
 document
   .querySelector(".new-recipe-form")
   .addEventListener("submit", newFormHandler);
 
-document
-  .querySelector(".recipe-list")
-  .addEventListener("click", delButtonHandler);
+// document
+//   .querySelector(".recipe-list")
+//   .addEventListener("click", delButtonHandler);
