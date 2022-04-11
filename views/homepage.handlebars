@@ -1,0 +1,70 @@
+{{#if recipes}}
+  <h2>Saved Recipes!</h2>
+  {{#each recipes as |recipe|}}
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img
+            src="{{imageURL}}"
+            class="img-fluid rounded-start"
+            alt="Photo Of Food"
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title"> Recipe: {{name}}</h5>
+            <p class="card-text">{{description}}</p>
+            <p class="card-text">Serves: {{serves}}</p>
+            <p class="card-text">Estimated Prep Time: {{prep_time}}</p>
+            <p class="card-text">Estimated Cook Time: {{cook_time}}</p>
+            <p class="card-text">Estimated Rest Time: {{rest_time}}</p>
+            <p class="card-text">List Of Ingredients: {{ingredients}}</p>
+            <p class="card-text">Directions: {{directions}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+{{else}}
+  <h2>You Have No Recipes Saved, Why Not Add Some?</h2>
+{{/if}}
+
+<h3>Create A New Recipe!</h3>
+
+<form>
+  <div class="mb-3">
+    <label for="recipe-name" class="form-label">Name of Recipe:</label>
+    <input type="text" class="form-control" id="recipe-name" />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Serves How Many?</label>
+    <input type="text" class="form-control" id="recipe-serves" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="recipe-prep_time">Estimated Prep Time:</label>
+    <input type="text" class="form-control" id="recipe-prep_time" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="recipe-cook_time">Estimated Cook Time:</label>
+    <input type="text" class="form-control" id="recipe-cook_time" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="recipe-rest_time">Estimated Rest Time:</label>
+    <input type="text" class="form-control" id="recipe-rest_time" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="recipe-ingredients">Ingredients:</label>
+    <input type="text" class="form-control" id="recipe-ingredients" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="recipe-directions">Directions:</label>
+    <input type="text" class="form-control" id="recipe-directions" />
+  </div>
+  <button id="upload_widget" class="cloudinary-button">Upload A Picture</button>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<script
+  src="https://upload-widget.cloudinary.com/global/all.js"
+  type="text/javascript"
+></script>
