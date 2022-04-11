@@ -1,6 +1,6 @@
 #headerBackground {
     height: 100%;
-    background-image: url("/public/images/teapotbackground.jpg");
+    background-image: url("../images/teapotbackground.jpg");
     background-size: cover;
   }
   
