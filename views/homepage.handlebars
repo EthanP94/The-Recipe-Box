@@ -1,6 +1,8 @@
 {{#if recipes}}
   <h2>Saved Recipes!</h2>
   {{#each recipes as |recipe|}}
+    <div class="paper">
+    <div class="paper-content">
     <div id ="recipeCard"class="card mb-3" style="max-width: 1000px;">
       <div class="row g-0">
         <div class="col-md-4">
@@ -23,6 +25,9 @@
         </div>
       </div>
     </div>
+    </div>
+    </div>
+
   {{/each}}
 {{else}}
   <h2>You Have No Recipes Saved, Why Not Add Some?</h2>
@@ -61,7 +66,7 @@
     <input type="text" class="form-control" id="recipe-directions" />
   </div>
   <button id="upload_widget" class="cloudinary-button">Upload A Picture</button>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button id="submitRecipe" type="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>
 
