@@ -14,7 +14,9 @@
 
 #homepageBackground {
     background-image: url("../images/teapotbackground.jpg");
-    margin-right: 95px;
+    margin-top: -2px;
+    display: flex;
+    justify-content: center;
   }
   
 #headerLinks {
@@ -30,4 +32,16 @@ h2 {
     font-family: 'Lobster', cursive;
     text-align: center;
     font-size: 30px;  
+}
+.loginBoxes{
+    width: 300px;
+   height: 325px;
+   padding:50px;
+   margin: 20px;
+   text-align: center; 
+   background-color: white;
+}
+main {
+    margin: 0px;
+    padding:0px;
 }
