@@ -1,7 +1,7 @@
 {{#if recipes}}
   <h2>Saved Recipes!</h2>
   {{#each recipes as |recipe|}}
-    <div class="card mb-3" style="max-width: 540px;">
+    <div id ="recipeCard"class="card mb-3" style="max-width: 1000px;">
       <div class="row g-0">
         <div class="col-md-4">
           <img
@@ -28,6 +28,7 @@
   <h2>You Have No Recipes Saved, Why Not Add Some?</h2>
 {{/if}}
 
+<div id="addRecipeBox">
 <h3>Create A New Recipe!</h3>
 
 <form class="new-recipe-form">
@@ -62,6 +63,7 @@
   <button id="upload_widget" class="cloudinary-button">Upload A Picture</button>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+</div>
 
 <script
   src="https://upload-widget.cloudinary.com/global/all.js"
