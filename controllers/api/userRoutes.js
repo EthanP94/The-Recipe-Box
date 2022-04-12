@@ -54,7 +54,11 @@ router.post("/", async (req,res) => {
       password: req.body.password,
     });
 
-    res.status(200).json(newUser)
+    req.session.save(() => {
+      req.session.logged_in = true;
+
+      res.json(newUser, { message: "You are now logged in!" });
+    });
   } catch (err) {
     res.status(400).json(err)
   }
