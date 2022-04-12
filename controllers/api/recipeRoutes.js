@@ -6,10 +6,12 @@ router.post('/', withAuth, async (req, res) => {
   try {
     const newRecipe = await Recipe.create({
       name: req.body.name,
-      prep_Time: req.body.prep_Time,
-      cook_Time: req.body.cook_Time,
-      cool_Time: req.body.cool_Time,
-      description: req.body.description,
+      serves: req.body.serves,
+      prep_Time: req.body.prep_time,
+      cook_Time: req.body.cook_time,
+      rest_time: req.body.rest_time,
+      ingredients: req.body.ingredients,
+      directions: req.body.directions,
       photos: req.body.photos
     });
     res.status(200).json(newRecipe);
@@ -22,13 +24,7 @@ router.delete('/:id', withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.destroy({
       where: {
-        id: req.params.id,
-        name: req.body.name,
-        prep_Time: req.body.prep_Time,
-        cook_Time: req.body.cook_Time,
-        cool_Time: req.body.cool_Time,
-        description: req.body.description,
-        photos: req.body.photos
+        id: req.params.id
       },
     });
 
