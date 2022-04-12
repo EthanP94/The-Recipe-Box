@@ -46,8 +46,9 @@ router.post("/logout", (req, res) => {
   }
 });
 
-router.post("/", async (req,res) => {
-  try{
+router.post("/", async (req, res) => {
+  try {
+    console.log(req.body);
     const newUser = await User.create({
       name: req.body.name,
       email: req.body.email,
@@ -57,10 +58,10 @@ router.post("/", async (req,res) => {
     req.session.save(() => {
       req.session.logged_in = true;
 
-      res.json(newUser, { message: "You are now logged in!" });
+      res.status(200).json(newUser);
     });
   } catch (err) {
-    res.status(400).json(err)
+    res.status(400).json(err);
   }
 });
 
