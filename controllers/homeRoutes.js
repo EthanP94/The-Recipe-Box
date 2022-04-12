@@ -3,11 +3,12 @@ const { Recipe } = require("../models");
 const withAuth = require("../utils/auth");
 
 // Prevent non logged in users from viewing the homepage
-router.get("/", async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.findAll({});
 
     const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
+    console.log(req.session);
 
     res.render("homepage", {
       recipes,
