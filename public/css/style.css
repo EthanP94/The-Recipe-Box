@@ -1,12 +1,33 @@
 #headerBackground {
-    height: 100%;
-    background-color: #ff6666;
+    height: 130px;
+    margin-left:30px;
+    width: 1430px;
+    background-image: url("../images/headerbackground.png");
     background-size: cover;
+    font-family: 'Lobster', cursive;
+    
+}
+#title {
+    font-Size: 50px;
+    text-align: center;
 }
 
 #homepageBackground {
-    height: 100%;
     background-image: url("../images/teapotbackground.jpg");
-    background-size: cover;
+    margin-right: 95px;
   }
   
+#headerLinks {
+    text-align: center;
+    color: black !important;
+    font-size: 30px;
+}
+
+a {
+    color:black;
+}
+h2 {
+    font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: 30px;  
+}
