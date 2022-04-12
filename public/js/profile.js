@@ -17,9 +17,11 @@ const newFormHandler = async (event) => {
 
   const name = document.querySelector("#recipe-name").value.trim();
   const cook_Time = document.querySelector("#recipe-cook_time").value.trim();
-  const description = document.querySelector("#recipe-directions").value.trim();
-  const cool_Time = document.querySelector("#recipe-rest_time").value.trim();
+  const directions = document.querySelector("#recipe-directions").value.trim();
+  const rest_Time = document.querySelector("#recipe-rest_time").value.trim();
   const prep_Time = document.querySelector("#recipe-prep_time").value.trim();
+  const serves = document.querySelector("#recipe-serves").value.trim();
+  const ingredients = document.querySelector("#recipe-ingredients").value.trim();
 
   if (name && cook_Time && description && cool_Time) {
     const response = await fetch(`/api/recipes`, {
@@ -28,9 +30,11 @@ const newFormHandler = async (event) => {
         name,
         prep_Time,
         cook_Time,
-        cool_Time,
-        description,
+        rest_Time,
+        directions,
         photos,
+        serves,
+        ingredients
       }),
       headers: {
         "Content-Type": "application/json",
@@ -38,7 +42,7 @@ const newFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/profile");
+      document.location.replace("/");
     } else {
       alert("Failed to create recipe");
     }
@@ -54,7 +58,7 @@ const delButtonHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/profile");
+      document.location.replace("/");
     } else {
       alert("Failed to delete recipe");
     }
