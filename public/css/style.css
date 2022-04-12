@@ -1,7 +1,5 @@
 #headerBackground {
     height: 130px;
-    margin-left:30px;
-    width: 1430px;
     background-image: url("../images/headerbackground.png");
     background-size: cover;
     font-family: 'Lobster', cursive;
@@ -28,7 +26,7 @@
 a {
     color:black;
 }
-h2 {
+h2, h3{
     font-family: 'Lobster', cursive;
     text-align: center;
     font-size: 30px;  
@@ -39,9 +37,22 @@ h2 {
    padding:50px;
    margin: 20px;
    text-align: center; 
-   background-color: white;
+   background-color: #d8e6f3;
+    border-radius: 20px;
 }
 main {
     margin: 0px;
     padding:0px;
+}
+#addRecipeBox {
+    width: 1000px;
+    margin: 20px;
+    background-color: #d8e6f3;
+    border-radius: 20px;
+
+}
+
+#recipeCard {
+    background-color: #d8e6f3;
+    border-radius: 20px;
 }
