@@ -7,12 +7,12 @@ router.post('/', withAuth, async (req, res) => {
     const newRecipe = await Recipe.create({
       name: req.body.name,
       serves: req.body.serves,
-      prep_Time: req.body.prep_time,
-      cook_Time: req.body.cook_time,
-      rest_time: req.body.rest_time,
+      prep_time: req.body.prep_Time,
+      cook_time: req.body.cook_Time,
+      rest_time: req.body.rest_Time,
       ingredients: req.body.ingredients,
       directions: req.body.directions,
-      photos: req.body.photos
+      imageURL: req.body.photos
     });
     res.status(200).json(newRecipe);
   } catch (err) {
