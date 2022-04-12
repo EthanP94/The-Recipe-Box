@@ -23,7 +23,7 @@ const newFormHandler = async (event) => {
   const serves = document.querySelector("#recipe-serves").value.trim();
   const ingredients = document.querySelector("#recipe-ingredients").value.trim();
 
-  if (name && cook_Time && description && cool_Time) {
+  if (name) {
     const response = await fetch(`/api/recipes`, {
       method: "POST",
       body: JSON.stringify({
