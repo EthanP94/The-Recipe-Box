@@ -37,7 +37,7 @@ h2, h3{
    padding:50px;
    margin: 20px;
    text-align: center; 
-   background-color: #d8e6f3;
+   background-color: #cdd7cf;
     border-radius: 20px;
     font-family: 'Lobster', cursive;
 }
@@ -48,7 +48,9 @@ main {
 #addRecipeBox {
     width: 1000px;
     margin: 20px;
-    background-color: #d8e6f3;
+    background-color: #cdd7cf;
+    border-style: solid;
+    border-color: #c51d54;
     border-radius: 20px;
 
 }
@@ -58,28 +60,28 @@ main {
 }
 #loginButton {
     margin-top: 10px;
-    background-color: #ffffcc;
+    background-color: #f4de90;
     color:black;
     font-family: 'Lobster', cursive;
     font-size: 15px;
 }
 #signupButton {
     margin-top: 10px;
-    background-color: #ffffcc;
+    background-color: #f4de90;
     color:black;
     font-family: 'Lobster', cursive;
     font-size: 15px;
 }
 #upload_widget {
     margin-top: 10px;
-    background-color: #ffffcc;
+    background-color: #f4de90;
     color:black;
     font-family: 'Lobster', cursive;
     font-size: 15px; 
 }
 #submitRecipe {
     margin-top: 10px;
-    background-color: #ffffcc;
+    background-color: #f4de90;
     color:black;
     font-family: 'Lobster', cursive;
     font-size: 15px; 
@@ -94,7 +96,7 @@ main {
     width: 90%;
     max-width: 800px;
     min-width: 400px;
-    height: 480px;
+    height: 625px;
     margin: 0 auto;
     margin-top: 20px;
     background: #fafafa;
@@ -131,7 +133,7 @@ main {
     border: 0;
     outline: 0;
     background: transparent;
-    color: mediumblue;
+    color: #575450;
     font-family: 'Handlee', cursive;
     font-weight: bold;
     font-size: 18px;
@@ -143,6 +145,10 @@ main {
     margin-top: -2px;
     display: flex;
     justify-content: center;
+}
+
+.recipeTitle {
+    font-size: 25px;
 }
 
 img {
