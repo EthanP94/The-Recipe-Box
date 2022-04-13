@@ -1,5 +1,5 @@
 body {
-  cursor: url("/images/teapot2.png"), auto;
+    cursor: url('/images/teapot1.png'), auto;
 }
 #headerBackground {
   height: 130px;
@@ -15,7 +15,6 @@ body {
 #homepageBackground {
   background-image: url("../images/teapotbackground.jpg");
 }
-
 #headerLinks {
   text-align: center;
   color: black !important;
@@ -23,6 +22,7 @@ body {
 }
 
 a {
+
   color: black;
 }
 h2,
@@ -40,6 +40,7 @@ h3 {
   background-color: #d8e6f3;
   border-radius: 20px;
   font-family: "Lobster", cursive;
+
 }
 main {
   margin: 0px;
@@ -122,6 +123,7 @@ main {
   left: 60px;
   background: linear-gradient(transparent, transparent 28px, #91d1d3 28px);
   background-size: 30px 30px;
+
 }
 
 .paper-content p,
