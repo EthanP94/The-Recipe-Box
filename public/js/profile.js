@@ -114,8 +114,19 @@ const myChart = new Chart(ctx, {
         }]
     },
     options: {
+      plugins: { 
+      legend: {
+        labels: {
+          color: "black", 
+          font: {
+            size: 14
+          }
+        }
+      }
     }
+  } 
 });
+myChart.defaults.global.defaultFontColor = "#000";
 
 document.getElementById("upload_widget").addEventListener(
   "click",
