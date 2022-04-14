@@ -85,7 +85,9 @@ const delButtonHandler = async (event) => {
 
 document.getElementById("upload_widget").addEventListener(
   "click",
-  function () {
+  function (e) {
+    e.stopImmediatePropagation();
+    e.preventDefault();
     myWidget.open();
   },
   false
