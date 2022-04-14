@@ -1,6 +1,7 @@
 {{#if recipes}}
   <h2>Saved Recipes!</h2>
   {{#each recipes as |recipe|}}
+    <a href="#" class="btn delete"><span></span><text>Delete</text></a>
     <div class="paper">
     <div class="paper-content">
     <div id ="recipeCard"class="mb-3" style="max-width: 1000px;">
@@ -95,6 +96,11 @@
   <button id="submitRecipe" type="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>
+
+ <script>
+      let btn = document.querySelector('.btn'); btn.onclick = function(){
+      btn.classList.toggle('active') }
+    </script>
 
 <script
   src="https://upload-widget.cloudinary.com/global/all.js"
