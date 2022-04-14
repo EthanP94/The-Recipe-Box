@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, STRING } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Recipe extends Model {}
@@ -40,6 +40,25 @@ Recipe.init(
     },
     imageURL: {
         type: DataTypes.STRING,
+    },
+    //
+    fat: {
+      type: DataTypes.DECIMAL(10, 2),
+    },
+    carbs: {
+      type: DataTypes.DECIMAL(10, 2),
+    },
+    protein:{
+      type:DataTypes.DECIMAL(10, 2)
+    },
+    sugar: {
+      type:DataTypes.DECIMAL(10, 2),
+    },
+    sodium:{
+      type:DataTypes.DECIMAL(10, 2),
+    },
+    calories: {
+      type:DataTypes.DECIMAL(10, 2)
     }
 
   },
