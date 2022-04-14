@@ -21,13 +21,16 @@ const newFormHandler = async (event) => {
   const rest_Time = document.querySelector("#recipe-rest_time").value.trim();
   const prep_Time = document.querySelector("#recipe-prep_time").value.trim();
   const serves = document.querySelector("#recipe-serves").value.trim();
-  const ingredients = document.querySelector("#recipe-ingredients").value.trim();
+  const ingredients = document
+    .querySelector("#recipe-ingredients")
+    .value.trim();
   const fat = document.querySelector("#recipe-fat").value.trim();
   const carbs = document.querySelector("#recipe-carbs").value.trim();
   const protein = document.querySelector("#recipe-protein").value.trim();
   const sugar = document.querySelector("#recipe-sugar").value.trim();
   const sodium = document.querySelector("#recipe-sodium").value.trim();
   const calories = document.querySelector("#recipe-calories").value.trim();
+  const createdby = document.querySelector("#recipe-createdby").value.trim();
 
   if (name) {
     const response = await fetch(`/api/recipes`, {
@@ -47,7 +50,8 @@ const newFormHandler = async (event) => {
         protein,
         sugar,
         sodium,
-        calories
+        calories,
+        createdby,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -63,6 +67,7 @@ const newFormHandler = async (event) => {
 };
 
 const delButtonHandler = async (event) => {
+  console.log("I did it!");
   if (event.target.hasAttribute("data-id")) {
     const id = event.target.getAttribute("data-id");
 
@@ -90,6 +95,6 @@ document
   .querySelector(".new-recipe-form")
   .addEventListener("submit", newFormHandler);
 
-// document
-//   .querySelector(".recipe-list")
-//   .addEventListener("click", delButtonHandler);
+document
+  .querySelectorAll(".gettingridof")
+  .forEach((el) => el.addEventListener("click", delButtonHandler));

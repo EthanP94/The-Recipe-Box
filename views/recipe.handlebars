@@ -1,6 +1,6 @@
 {{#if recipes}}
   <h2>Saved Recipes!</h2>
-  <div class="row" >
+  <div class="row">
     <div class="paper col-sm-7">
       <div class="paper-content">
         <div id="recipeCard" class="mb-3" style="max-width: 1000px;">
@@ -22,6 +22,7 @@
                 <p class="">Estimated Rest Time: {{recipes.rest_time}}</p>
                 <p class="">List Of Ingredients: {{recipes.ingredients}}</p>
                 <p class="">Directions: {{recipes.directions}}</p>
+                <p class="">Created By: {{createdby}}</p>
                 <div class="macro-container d-flex flex-row">
                   <p data-macro={{recipes.fat}}>Fat: {{recipes.fat}}</p>
                   <p data-macro={{recipes.carbs}}>Carbs: {{recipes.carbs}}</p>
@@ -40,7 +41,12 @@
       </div>
     </div>
     <div class="col-sm-4 d-flex align-items-center">
-    <canvas class="bg-graph rounded p-2" id="myChart" width="50px" height="50px"></canvas>
+      <canvas
+        class="bg-graph rounded p-2"
+        id="myChart"
+        width="50px"
+        height="50px"
+      ></canvas>
     </div>
   </div>
 
