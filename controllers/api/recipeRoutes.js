@@ -1,8 +1,8 @@
 const router = require("express").Router();
 const { Recipe } = require("../../models");
-const withAuth = require('../../utils/auth');
+const withAuth = require("../../utils/auth");
 
-router.post('/', withAuth, async (req, res) => {
+router.post("/", withAuth, async (req, res) => {
   try {
     const newRecipe = await Recipe.create({
       name: req.body.name,
@@ -12,7 +12,14 @@ router.post('/', withAuth, async (req, res) => {
       rest_time: req.body.rest_Time,
       ingredients: req.body.ingredients,
       directions: req.body.directions,
-      imageURL: req.body.photos
+      imageURL: req.body.photos,
+      fat: req.body.fat,
+      carbs: req.body.carbs,
+      protein: req.body.protein,
+      sugar: req.body.sugar,
+      sodium: req.body.sodium,
+      calories: req.body.calories,
+      createdby: req.body.createdby,
     });
     res.status(200).json(newRecipe);
   } catch (err) {
@@ -20,16 +27,16 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete("/:id", withAuth, async (req, res) => {
   try {
     const recipeData = await Recipe.destroy({
       where: {
-        id: req.params.id
+        id: req.params.id,
       },
     });
 
     if (!recipeData) {
-      res.status(404).json({ message: 'No Recipe found!' });
+      res.status(404).json({ message: "No Recipe found!" });
       return;
     }
 
